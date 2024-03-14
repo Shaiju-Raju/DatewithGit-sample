@@ -1,20 +1,18 @@
-
-import './app.css'
-import Header from './Components/Header';
-const data ='Shaiju Raju'
 function App() {
+  let count = 0;
+  function addCount(){
+    count=count+1
+    console.log(count);
+  }
   return (
     <div> 
-      <Header data={data}/>
-      <p>This is sample Description</p>
-      <Hello/>
-      <Hello/>
+      <button onClick={addCount}> Add</button>
+      <h1>Count : {count}</h1>
+      
     </div>
   );
 }
 
-function Hello(){
-return(<h1 className='hello'>  Hello World {data}</h1>)
-}
+
 
 export default App;
