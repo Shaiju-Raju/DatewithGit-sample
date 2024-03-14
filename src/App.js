@@ -1,7 +1,8 @@
+import { useState } from "react";
 function App() {
-  let count = 0;
-  function addCount(){
-    count=count+1
+  const [count,setCount] =useState(0)
+  const addCount =()=>{
+    setCount(count+1);
     console.log(count);
   }
   return (
